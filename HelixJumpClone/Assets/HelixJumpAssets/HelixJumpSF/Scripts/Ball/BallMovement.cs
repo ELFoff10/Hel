@@ -18,6 +18,7 @@ public class BallMovement : MonoBehaviour
     private void Start()
     {
         enabled = false;
+
         animator = GetComponent<Animator>();
     }
     private void Update()
