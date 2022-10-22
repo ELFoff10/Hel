@@ -14,16 +14,14 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private int minTrapSegment;
     [SerializeField] private int maxTrapSegment;
 
-
-    public Transform BALLTRANSFORM;
-
     private float floorAmount = 0;
+    public float FloorAmount => floorAmount;
 
+    private float lastFoorY = 0;
+    public float LastFloorY => lastFoorY;
     private void Start()
     {
         Generate(1);
-
-        BALLTRANSFORM.position = new Vector3(BALLTRANSFORM.position.x, floorAmount * floorHeight - floorHeight, BALLTRANSFORM.position.z);
     }
     public void Generate(int level)
     {
@@ -54,6 +52,7 @@ public class LevelGenerator : MonoBehaviour
             if (i == floorAmount - 1)
             {
                 floor.AddEmptySegment(2);
+                lastFoorY = floor.transform.position.y;
             }
         }
     }
@@ -61,7 +60,7 @@ public class LevelGenerator : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i) == axis) 
+            if (transform.GetChild(i) == axis)
             {
                 continue;
             }

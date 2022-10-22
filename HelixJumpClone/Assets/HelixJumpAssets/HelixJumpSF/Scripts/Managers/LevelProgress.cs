@@ -1,29 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class LevelProgress : MonoBehaviour
+public class LevelProgress : BallEvents
+
 {
-    [SerializeField] private BallController ballController;
-
     private int currentLevel = 1;
     public int CurrentLevel => currentLevel;
 
-    private void Start()
+    protected override void Awake()
     {
-        ballController.CollisionSegment.AddListener(OnBallCollisionSegment);
-    }
+        base.Awake();
 
-    private void OnDestroy()
+        Load();
+    }
+#if UNITY_EDITOR
+    private void Update()
     {
-        ballController.CollisionSegment.RemoveListener(OnBallCollisionSegment);
-    }
+        if (Input.GetKeyDown(KeyCode.F1) == true)
+        {
+            Reset();
+        }
 
-    private void OnBallCollisionSegment(SegmentType type)
+        if (Input.GetKeyDown(KeyCode.F2) == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+#endif
+    protected override void OnBallCollisionSegment(SegmentType type)
     {
         if (type == SegmentType.Finish)
         {
             currentLevel++;
+            Save();
         }
     }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("LevelProgress:CurrenLevel", currentLevel);
+    }
+
+    private void Load()
+    {
+        currentLevel = PlayerPrefs.GetInt("LevelProgress:CurrenLevel", 1);
+    }
+#if UNITY_EDITOR
+    private void Reset()
+    {
+        PlayerPrefs.DeleteAll();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+#endif
 }
