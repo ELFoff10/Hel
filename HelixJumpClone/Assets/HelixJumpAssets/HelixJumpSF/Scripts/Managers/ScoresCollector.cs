@@ -7,6 +7,7 @@ public class ScoresCollector : BallEvents
     [SerializeField] private LevelProgress levelProgress;
 
     [SerializeField] private int scores;
+    [SerializeField] private int record;
 
     public int Scores => scores;
 
@@ -15,6 +16,13 @@ public class ScoresCollector : BallEvents
         if (type == SegmentType.Empty)
         {
             scores += levelProgress.CurrentLevel;
-        }        
+
+            if (scores > record)
+            {
+                record = scores;
+            }
+        }
     }
+
+    public int Record => record;
 }

@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelProgress : BallEvents
 
 {
+    ScoresCollector collector;
     private int currentLevel = 1;
     public int CurrentLevel => currentLevel;
 
@@ -34,6 +33,7 @@ public class LevelProgress : BallEvents
         if (type == SegmentType.Finish)
         {
             currentLevel++;
+            
             Save();
         }
     }

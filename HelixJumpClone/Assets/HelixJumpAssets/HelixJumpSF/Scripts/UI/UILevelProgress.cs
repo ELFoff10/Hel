@@ -20,9 +20,9 @@ public class UILevelProgress : BallEvents
         currentLevelText.text = levelProgress.CurrentLevel.ToString();
         nextLevelText.text = (levelProgress.CurrentLevel + 1).ToString();
 
-        progressBar.fillAmount = 0;
+        progressBar.fillAmount = 0.0f;
 
-        fillAmountStep = 1 / levelGenerator.FloorAmount;
+        fillAmountStep = 1.0f / levelGenerator.FloorAmount;
     }
 
 
@@ -33,5 +33,4 @@ public class UILevelProgress : BallEvents
             progressBar.fillAmount += fillAmountStep;
         }
     }
-
 }

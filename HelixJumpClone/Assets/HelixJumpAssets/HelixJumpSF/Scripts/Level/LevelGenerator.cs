@@ -19,10 +19,7 @@ public class LevelGenerator : MonoBehaviour
 
     private float lastFoorY = 0;
     public float LastFloorY => lastFoorY;
-    private void Start()
-    {
-        Generate(1);
-    }
+
     public void Generate(int level)
     {
         DestroyChild();
@@ -64,6 +61,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 continue;
             }
+
             Destroy(transform.GetChild(i).gameObject);
         }
     }

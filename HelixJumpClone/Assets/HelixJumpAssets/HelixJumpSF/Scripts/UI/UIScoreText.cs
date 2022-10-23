@@ -8,6 +8,7 @@ public class UIScoreText : BallEvents
 {
     [SerializeField] private ScoresCollector scoresCollector;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text recordText;
 
     protected override void OnBallCollisionSegment(SegmentType type)
     {
