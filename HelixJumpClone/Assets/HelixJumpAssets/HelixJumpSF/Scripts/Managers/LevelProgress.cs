@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelProgress : BallEvents
 
 {
-    ScoresCollector collector;
+    [SerializeField] private ScoresCollector collector;
     private int currentLevel = 1;
     public int CurrentLevel => currentLevel;
 
@@ -33,19 +33,26 @@ public class LevelProgress : BallEvents
         if (type == SegmentType.Finish)
         {
             currentLevel++;
-            
+
+            if (collector.Scores > collector.Record)
+            {
+                collector.Record = collector.Scores;
+            }
+
             Save();
         }
     }
 
     private void Save()
     {
+        PlayerPrefs.SetInt("Record", collector.Record);
         PlayerPrefs.SetInt("LevelProgress:CurrenLevel", currentLevel);
     }
 
     private void Load()
     {
-        currentLevel = PlayerPrefs.GetInt("LevelProgress:CurrenLevel", 1);
+        collector.Record = PlayerPrefs.GetInt("Record", collector.Record);
+        currentLevel = PlayerPrefs.GetInt("LevelProgress:CurrenLevel", currentLevel);
     }
 #if UNITY_EDITOR
     private void Reset()

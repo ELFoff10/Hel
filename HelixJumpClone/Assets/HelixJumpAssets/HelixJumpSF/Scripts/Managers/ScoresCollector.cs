@@ -10,6 +10,11 @@ public class ScoresCollector : BallEvents
     [SerializeField] private int record;
 
     public int Scores => scores;
+    public int Record
+    {
+        get { return record; }
+        set { record = value; }
+    }
 
     protected override void OnBallCollisionSegment(SegmentType type)
     {
@@ -17,12 +22,10 @@ public class ScoresCollector : BallEvents
         {
             scores += levelProgress.CurrentLevel;
 
-            if (scores > record)
-            {
-                record = scores;
-            }
+            //if (scores > record)
+            //{
+            //    record = scores;  
+            //}
         }
     }
-
-    public int Record => record;
 }

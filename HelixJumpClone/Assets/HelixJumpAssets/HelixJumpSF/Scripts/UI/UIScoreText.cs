@@ -16,6 +16,12 @@ public class UIScoreText : BallEvents
         {
             scoreText.text = scoresCollector.Scores.ToString();
         }
+
+        if (type != SegmentType.Finish)
+        {            
+            recordText.text = scoresCollector.Record.ToString();
+        }
+
     }
 
 }

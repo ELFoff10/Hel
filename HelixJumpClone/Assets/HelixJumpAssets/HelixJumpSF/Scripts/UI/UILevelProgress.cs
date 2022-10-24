@@ -13,24 +13,17 @@ public class UILevelProgress : BallEvents
     [SerializeField] private Text nextLevelText;
     [SerializeField] private Image progressBar;
 
-    private float fillAmountStep;
-
     private void Start()
     {
         currentLevelText.text = levelProgress.CurrentLevel.ToString();
         nextLevelText.text = (levelProgress.CurrentLevel + 1).ToString();
-
-        progressBar.fillAmount = 0.0f;
-
-        fillAmountStep = 1.0f / levelGenerator.FloorAmount;
     }
-
 
     protected override void OnBallCollisionSegment(SegmentType type)
     {
         if (type == SegmentType.Empty || type == SegmentType.Finish)
         {
-            progressBar.fillAmount += fillAmountStep;
+            progressBar.fillAmount += 1 / levelGenerator.FloorAmount;
         }
     }
 }
