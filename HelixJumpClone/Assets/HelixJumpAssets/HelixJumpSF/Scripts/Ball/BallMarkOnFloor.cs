@@ -18,7 +18,7 @@ public class BallMarkOnFloor : BallEvents
             mark.SetRandomRotation();
             mark.transform.position = generateTransformVisualModel.position;
             mark.transform.SetParent(parentTransformLevel);
-            mark.transform.position -= new Vector3(0, 0.1f, 0);
+            mark.transform.position -= new Vector3(0, 0.11f, 0);
         }
     }
 }
