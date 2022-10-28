@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoresCollector : BallEvents
@@ -21,11 +19,6 @@ public class ScoresCollector : BallEvents
         if (type == SegmentType.Empty)
         {
             scores += levelProgress.CurrentLevel;
-
-            //if (scores > record)
-            //{
-            //    record = scores;  
-            //}
         }
     }
 }

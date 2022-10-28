@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelProgress : BallEvents
-
 {
     [SerializeField] private ScoresCollector collector;
     private int currentLevel = 1;
@@ -42,13 +41,11 @@ public class LevelProgress : BallEvents
             Save();
         }
     }
-
     private void Save()
     {
         PlayerPrefs.SetInt("Record", collector.Record);
         PlayerPrefs.SetInt("LevelProgress:CurrenLevel", currentLevel);
     }
-
     private void Load()
     {
         collector.Record = PlayerPrefs.GetInt("Record", collector.Record);

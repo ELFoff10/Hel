@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 public class UIScoreText : BallEvents
 {
@@ -21,7 +18,5 @@ public class UIScoreText : BallEvents
         {            
             recordText.text = scoresCollector.Record.ToString();
         }
-
     }
-
 }
