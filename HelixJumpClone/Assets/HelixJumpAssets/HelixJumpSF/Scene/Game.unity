@@ -550,42 +550,36 @@ MonoBehaviour:
     TrapSegmentColor: {r: 0.7921569, g: 0.16862746, b: 0.16862746, a: 1}
     FinishSegmentColor: {r: 0.20392157, g: 0.8117647, b: 0.21568628, a: 1}
     BackgroundColor: {r: 0.3372549, g: 0.6431373, b: 0.41960785, a: 1}
-    HighlightColor: {r: 0.5411765, g: 0.5764706, b: 0.2784314, a: 0}
   - AxisColor: {r: 0.6415094, g: 0.6212314, b: 0.19668922, a: 1}
     BallColor: {r: 0.26223743, g: 0.64327294, b: 0.6698113, a: 1}
     DefaultSegmentColor: {r: 0.7735849, g: 0.5880802, b: 0.22988607, a: 1}
     TrapSegmentColor: {r: 0.7924528, g: 0.40744036, b: 0.40744036, a: 1}
     FinishSegmentColor: {r: 0.016420428, g: 0.27455854, b: 0.38679248, a: 1}
     BackgroundColor: {r: 0.6509434, g: 0.2732734, b: 0.5368737, a: 0}
-    HighlightColor: {r: 0.4339623, g: 0.2272161, b: 0.40808442, a: 0}
   - AxisColor: {r: 0.1960784, g: 0.3221209, b: 0.6431373, a: 1}
     BallColor: {r: 0.67058825, g: 0.2627451, b: 0.3228026, a: 1}
     DefaultSegmentColor: {r: 0.7735849, g: 0.5880802, b: 0.22988607, a: 1}
     TrapSegmentColor: {r: 0.8018868, g: 0.37554017, b: 0.22316661, a: 1}
     FinishSegmentColor: {r: 0.16189036, g: 0.3207547, b: 0.16458324, a: 1}
     BackgroundColor: {r: 0.5, g: 0.36556605, b: 0.36556605, a: 0}
-    HighlightColor: {r: 0.8490566, g: 0.6688323, b: 0.6688323, a: 0}
   - AxisColor: {r: 0.40610537, g: 0.735849, b: 0.42783386, a: 1}
     BallColor: {r: 0.754717, g: 0.18867925, b: 0.49956962, a: 1}
     DefaultSegmentColor: {r: 0.6226415, g: 0.5736278, b: 0.47872907, a: 1}
     TrapSegmentColor: {r: 0.6132076, g: 0.46569064, b: 0.46569064, a: 1}
     FinishSegmentColor: {r: 0.45113918, g: 0.62272114, b: 0.6981132, a: 1}
     BackgroundColor: {r: 0.6698113, g: 0.42653078, b: 0.42653078, a: 0}
-    HighlightColor: {r: 0.74525386, g: 0.7924528, b: 0.5494838, a: 0}
   - AxisColor: {r: 0, g: 0.23359418, b: 1, a: 1}
     BallColor: {r: 1, g: 1, b: 1, a: 1}
     DefaultSegmentColor: {r: 0, g: 0, b: 0, a: 1}
     TrapSegmentColor: {r: 1, g: 0, b: 0, a: 1}
     FinishSegmentColor: {r: 0, g: 1, b: 0.16606593, a: 1}
     BackgroundColor: {r: 0.9061289, g: 1, b: 0, a: 0}
-    HighlightColor: {r: 0, g: 0.8143573, b: 1, a: 0}
   axisMaterial: {fileID: 2100000, guid: d23affa011706cf4f9fb1c796c682a33, type: 2}
   ballMaterial: {fileID: 2100000, guid: b135f7a71823133479592f35fcf5f5d8, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 489835b96466d3445861c1d14a1b9d50, type: 2}
   trapMaterial: {fileID: 2100000, guid: e065dea7fa507824fad48fbdabf38ada, type: 2}
   finishMaterial: {fileID: 2100000, guid: 128ec9c0d85cbae46b3b71aee8ce802b, type: 2}
   backgroundImage: {fileID: 1695096568}
-  camera: {fileID: 821412609}
 --- !u!114 &1990810273 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
@@ -674,6 +668,14 @@ PrefabInstance:
     - target: {fileID: 1050961639, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
       propertyPath: m_CollisionDetection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688410255303183280, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: m_Radius
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688410255303183280, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2688410256032613266, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
       propertyPath: m_Name

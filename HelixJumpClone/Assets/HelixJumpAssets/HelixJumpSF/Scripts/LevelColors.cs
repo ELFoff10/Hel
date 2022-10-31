@@ -10,8 +10,6 @@ public class LevelPalette
     public Color TrapSegmentColor;
     public Color FinishSegmentColor;
     public Color BackgroundColor;
-    public Color HighlightColor;
-
 }
 
 public class LevelColors : MonoBehaviour
@@ -24,7 +22,6 @@ public class LevelColors : MonoBehaviour
     [SerializeField] private Material trapMaterial;
     [SerializeField] private Material finishMaterial;
     [SerializeField] private Image backgroundImage;
-    [SerializeField] private new Camera camera;
     void Start()
     {
         int index = Random.Range(0, palette.Length);
@@ -35,6 +32,5 @@ public class LevelColors : MonoBehaviour
         trapMaterial.color = palette[index].TrapSegmentColor;
         finishMaterial.color = palette[index].FinishSegmentColor;
         backgroundImage.color = palette[index].BackgroundColor;
-        camera.backgroundColor= palette[index].HighlightColor;
     }
 }
