@@ -36,6 +36,5 @@ public class LevelColors : MonoBehaviour
         finishMaterial.color = palette[index].FinishSegmentColor;
         backgroundImage.color = palette[index].BackgroundColor;
         camera.backgroundColor= palette[index].HighlightColor;
-
     }
 }

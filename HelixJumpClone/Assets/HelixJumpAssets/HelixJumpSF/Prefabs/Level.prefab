@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: {fileID: 2032011431947341034}
   floorPrefab: {fileID: 6674039578342239406, guid: ab3d9116e65e6ab40810f4a5782245ac, type: 3}
-  defaultFloorAmount: 6
+  defaultFloorAmount: 2
   floorHeight: 2.5
   amountEmptySegment: 2
   minTrapSegment: 1

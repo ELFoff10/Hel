@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1050961639}
   - component: {fileID: 953197606}
   - component: {fileID: 953197605}
+  - component: {fileID: 2688410256546145657}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -77,13 +78,13 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &953197606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallHeight: 2.5
-  fallSpeedDefault: 10
-  fallSpeedMax: 25
-  fallSpeedAcceleration: 25
+  fallSpeedDefault: 5
+  fallSpeedMax: 5
+  fallSpeedAcceleration: 5
 --- !u!114 &953197605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +116,22 @@ MonoBehaviour:
   CollisionSegment:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2688410256546145657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688410256032613266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c237b334e19c39f46b74516ebc717eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballController: {fileID: 953197605}
+  markPrefab: {fileID: 0}
+  generateTransformVisualModel: {fileID: 2505584274483211358}
+  parentTransformLevel: {fileID: 0}
 --- !u!1 &2688410256120875015
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +174,7 @@ Camera:
   m_GameObject: {fileID: 2688410256120875015}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -221,11 +238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82846d5eedf07894eabe61cdcbd50527, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000003065359
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82846d5eedf07894eabe61cdcbd50527, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.018
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82846d5eedf07894eabe61cdcbd50527, type: 3}
       propertyPath: m_LocalPosition.z
@@ -304,5 +321,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.19
+  m_Radius: 0.18
   m_Center: {x: -0.000000007450581, y: 0.0000003874302, z: -0.000000044703484}

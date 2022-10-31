@@ -21,6 +21,9 @@ public class BallController : OneColliderTrigger
             if (floorSegment.Type == SegmentType.Empty)
             {
                 movement.Fall(other.transform.position.y);
+                floorSegment.GetComponentInParent<Rigidbody>().useGravity = true;
+                floorSegment.GetComponentInParent<Rigidbody>().isKinematic = false;
+                floorSegment.GetComponentInParent<Animator>().enabled = true;
             }
 
             if (floorSegment.Type == SegmentType.Default)
