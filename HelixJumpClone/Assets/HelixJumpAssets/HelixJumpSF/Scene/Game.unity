@@ -517,6 +517,7 @@ MonoBehaviour:
   levelProgress: {fileID: 1756626061}
   scores: 0
   record: 0
+  isEmpty: 0
 --- !u!114 &1756626065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,13 +666,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: Time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: _scoresCollector
+      value: 
+      objectReference: {fileID: 1756626064}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1997802580938300294}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DetachChildren
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197605, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197606, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: fallSpeedMax
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197606, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: fallSpeedDefault
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 953197606, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
+      propertyPath: fallSpeedAcceleration
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1050961639, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2688410255303183280, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
       propertyPath: m_Radius
-      value: 0.19
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 2688410255303183280, guid: 971a2cc203149cc4daf735fe6f642089, type: 3}
       propertyPath: m_IsTrigger
